@@ -50,17 +50,22 @@ $(document).ready(function () {
         return false;
     });
 
-    $('#envoyer').click(function (){
+    $('#envoyer').click(function () {
         $.ajax({
             url: "SendData",
-            data:{employes :JSON.stringify(employes)},
+            data: {employes: JSON.stringify(employes)},
             type: 'GET',
             cache: false,
             success: function (data) {
-                console.log(data);
+                if (data == 'yes') {
+                    localStorage.removeItem('employes');
+                    load();
+                }else {
+                   alert('impossible d insérer');
+                }
             },
             error: function (jqXHR, textStatus, errorThrown) {
-                
+
             }
         });
     });

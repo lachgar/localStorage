@@ -43,7 +43,15 @@ public class SendData extends HttpServlet {
         List<Employe> employes = new Gson().fromJson(request.getParameter("employes"), type);
 
         EmployeService es = new EmployeService();
-        es.create(employes);
+        String msg = "";
+        if(es.create(employes)){
+            msg="yes";
+        }else {
+            msg = "no";
+        }
+        response.getWriter().write(msg);
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
