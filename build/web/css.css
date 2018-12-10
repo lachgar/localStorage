@@ -1,0 +1,65 @@
+fieldset  {
+    width: 50%;
+    margin: auto;
+    font-family: "Montserrat", "sans-serif"; /* just a custom font */
+    width: 30em;							/* fixed width for the box */
+    border-radius: 0.5em;					/* applied border radius */
+    border: 0.1em solid #ccc;				/* custom border style */
+    background-color: #fffde1;				/* added a background color */
+    box-shadow: 0.08em 0.05em 0.08em #ccc;	/* added a soft box shadow */
+    margin-bottom: 2em;
+}
+
+input {
+    margin-bottom: 1em;
+}
+
+#envoyer {
+    width:85px;
+    height:85px;
+    background:#cc0000;
+    font:bold 13px Arial;
+    border-radius:50%;
+    border:none;
+    color:#fff;
+    float: right;
+}
+#valider {
+    border-radius:12px 0 12px 0;
+    background: #478bf9;
+    border:none;
+    color:#fff;
+    font:bold 12px Verdana;
+    padding:6px 0 6px 0; 
+}
+.tab{
+    border-collapse: collapse;
+    margin: 0 auto; 
+}
+
+.tab td, th{
+    border : 1px solid black;
+    padding: 10px 15px;
+}
+
+.tab tr:nth-child(2n){
+    background-color: #BBB;
+}
+
+.tab tr:nth-child(2n + 1){
+    background-color: #EEE;
+}
+
+
+a:link, a:visited {
+    background-color: #478bf9;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}

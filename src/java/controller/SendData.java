@@ -36,6 +36,7 @@ public class SendData extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         Type  type = new TypeToken<List<Employe>>() {}.getType();
 
         List<Employe> employes = new Gson().fromJson(request.getParameter("employes"), type);
