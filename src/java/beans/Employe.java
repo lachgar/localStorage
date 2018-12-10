@@ -5,11 +5,24 @@
  */
 package beans;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  *
  * @author a
  */
+
+@Entity
 public class Employe {
+    @Id
+    @GeneratedValue
+    private int id;
+    @NotNull
+    @NotEmpty
     private String nom;
     private String prenom;
     private String email;
@@ -47,6 +60,15 @@ public class Employe {
         this.email = email;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    
     @Override
     public String toString() {
         return "Emlpoye{" + "nom=" + nom + ", prenom=" + prenom + ", email=" + email + '}';
